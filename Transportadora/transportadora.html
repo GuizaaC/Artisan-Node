@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro do Produto</title>
+    <script>
+       function fnValidar() {
+      if(document.getElementById('Nome_Transportadora').value==0)       
+        {alert('O nome da transportadora é obrigatório');
+         return false;
+        }
+      if(document.getElementById('Cnpj_Transportadora').value==0)       
+        {alert('O Cnpj da transportadora é obrigatório');
+         return false;
+         }
+      if(document.getElementById('Telefone_Transportadora').value==0)       
+        {alert('O telefone da transportadora é obrigatório');
+         return false;
+         }
+      if(document.getElementById('Endereco_Transportadora').value==0)       
+        {alert('O endereço da transportadora é obrigatório');
+         return false;
+         }
+      if(document.getElementById('Cep_Transportadora').value==0)       
+        {alert('O Cep é obrigatório');
+         return false;
+         }
+      document.getElementById("Adicionar_Transportadora").submit();
+    }
+    </script>
+</head>
+<body>
+    <header class="topo">
+        <button class="voltar"><a href="../home/index.html">Voltar</a></button>
+    </header>
+<br> <br><br>
+    <div class="container">
+<form id="Adicionar_Transportadora" action='salvartransportadora.php' method="post" onsubmit>
+    <label class="titulo">Nome</label> <br>
+        <input class="entrada" name='Nome_Transportadora'  id="Nome_Transportadora" placeholder="Nome do fornecedor" required> <br><br>
+    <label class="titulo">Cnpj</label> <br>
+        <input class="entrada" type="text" name='Cnpj_Transportadora' id="Cnpj_Transportadora" placeholder="Cnpj" required> <br><br>
+    <label class="titulo">Telefone</label> <br>
+        <input class="entrada" type="tel" name='Telefone_Transportadora' id="Telefone_Transportadora" placeholder="Telefone" > <br><br>
+    <label class="titulo">Endereco</label> <br>
+        <input class="entrada"  name='Endereco_Transportadora' id="Endereco_Transportadora" placeholder="Endereço" > <br><br>
+    <label class="titulo">Cep</label> <br>
+        <input class="entrada"  name='Cep_Transportadora' id="Cep_Transportadora" placeholder="Cep" > <br><br>
+        
+    <input class="enviar" type="button"  value="enviar" onclick="fnValidar()">
+</form> 
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro do Produto</title>
+    <script>
+       function fnValidar() {
+      if(document.getElementById('Nome_Produto').value==0)       
+        {alert('O nome do produto é obrigatório');
+         return false;
+        }
+      if(document.getElementById('Quantidade_Produto').value==0)       
+        {alert('A quantidade do produto é obrigatória');
+         return false;
+         }
+      document.getElementById("Adicionar_Produto").submit();
+    }
+    </script>
+</head>
+  
+<body>
+    <header class="topo">
+        <button class="voltar"><a href="../home/index.html">Voltar</a></button>
+    </header>
+<br> <br><br>
+    <div class="container">
+<form id="Adicionar_Produto" action='salvarestoque.php' method="post" onsubmit>
+    <label class="titulo">Produto</label> <br>
+        <input class="entrada" name='Nome_Produto'  id="Nome_Produto" placeholder="Nome do produto" required> <br><br>
+    <label class="titulo">Quantidade</label> <br>
+        <input class="entrada" type="text" name='Quantidade_Produto' id="Quantidade_Produto" placeholder="Quantidade" required> <br><br>
+    <label class="titulo">Descrição</label> <br>
+        <textarea style="resize : none" class="entrada"  name='Descricao_Produto' placeholder="Descrição do material" maxlength="500" rows="10" cols="40"></textarea> <br><br>
+<input class="enviar" type="button"  value="enviar" onclick="fnValidar()">
+</form> 
+</body>
+</html>

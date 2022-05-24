@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro do Produto</title>
+    <script>
+       function fnValidar() {
+      if(document.getElementById('Nome_Fornecedor').value==0)       
+        {alert('O nome do fornecedor é obrigatório');
+         return false;
+        }
+      if(document.getElementById('Cnpj_Fornecedor').value==0)       
+        {alert('O Cnpj é obrigatório');
+         return false;
+         }
+      if(document.getElementById('Telefone_Fornecedor').value==0)       
+        {alert('O telefone é obrigatório');
+         return false;
+         }
+      if(document.getElementById('Endereco_Fornecedor').value==0)       
+        {alert('O endereço do fornecedor é obrigatório');
+         return false;
+         }
+      if(document.getElementById('Cep_Fornecedor').value==0)       
+        {alert('O Cep é obrigatório');
+         return false;
+         }
+      document.getElementById("Adicionar_Fornecedor").submit();
+    }
+    </script>
+</head>
+<body>
+    <header class="topo">
+        <button class="voltar"><a href="../home/index.html">Voltar</a></button>
+    </header>
+<br> <br><br>
+    <div class="container">
+<form id="Adicionar_Fornecedor" action='salvarfornecedor.php' method="post" onsubmit>
+    <label class="titulo">Nome</label> <br>
+        <input class="entrada" name='Nome_Fornecedor'  id="Nome_Fornecedor" placeholder="Nome do fornecedor" required> <br><br>
+    <label class="titulo">Cnpj</label> <br>
+        <input class="entrada" type="text" name='Cnpj_Fornecedor' id="Cnpj_Fornecedor" placeholder="Cnpj" required> <br><br>
+    <label class="titulo">Telefone</label> <br>
+        <input class="entrada" type="tel" name='Telefone_Fornecedor' id="Telefone_Fornecedor" placeholder="Telefone" > <br><br>
+    <label class="titulo">Endereço</label> <br>
+        <input class="entrada"  name='Endereco_Fornecedor' id="Endereco_Fornecedor" placeholder="Endereço" > <br><br>
+    <label class="titulo">Cep</label> <br>
+        <input class="entrada"  name='Cep_Fornecedor' id="Cep_Fornecedor" placeholder="Cep" > <br><br>
+        
+    <input class="enviar" type="button"  value="enviar" onclick="fnValidar()">
+</form> 
+</body>
+</html>

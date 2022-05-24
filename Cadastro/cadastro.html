@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+
+    <header class="topo"><img src="../assets/Logo.png" alt="Logo" class="logo">
+        <a href="../index.html">
+            <button class="voltar">Voltar</button>
+        </a>
+    </header>
+    
+<br> <br><br>
+    <div class="container">
+<form id="formSalvar" action='/cadastrar' method="POST" onsubmit>
+    <label class="titulo">Nome</label> <br>
+        <input class="entrada" name='Nome_Cliente' id="Nome_Cliente" placeholder="Nome" > <br>
+    <label class="titulo">Endereço</label> <br>
+        <input class="entrada" name='Endereco_Cliente' id="Endereco_Cliente" placeholder="Endereço">  <br>
+    <label class="titulo">Telefone</label> <br>
+        <input class="entrada" name='Telefone_Cliente' id="Telefone_Cliente" placeholder="(00)90000-0000" > <br>
+    <label class="titulo">CPF</label> <br>
+        <input class="entrada" name='Cpf_Cliente' id="CPF_Cliente" placeholder="000.000.000-00" > <br>
+    <label class="titulo">Data de Nascimento</label> <br>
+        <input class="entrada" name='Data_Nascimento_Cliente' id="Data_Cliente" placeholder="DD/MM/AAAA" > <br>
+    <label class="titulo">Email</label> <br>
+        <input class="entrada" name='Email_Cliente' id="Email_Cliente" placeholder="Email"> <br>
+  <label class="titulo">Senha</label> <br>
+        <input class="entrada" name='Senha_Cliente' id="Senha_Cliente" placeholder="Senha" required> <br>
+        
+<input type="submit" id="submit" value="Submit">
+<!-- <input class="enviar" type=button value="Enviar" onclick="fnValidar();"> -->
+
+
+</form> 
+<!--  <script src="/cadastro/script.js"></script> -->
+</body>
+</html>

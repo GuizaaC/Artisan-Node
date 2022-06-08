@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+    <title>Cadastro</title>
+    <link  href="/views/cadastrar/cadastrar.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="topo">
+        <a href="../index.html">
+            <button class="voltar">Voltar</button>
+        </a>
+    </header>
+    
+<br> <br><br>
+    <div class="container">
+
+    <h1>Cadastrar!</h1>
+    <h2><%= msg %></h2>
+    <form method="POST" action="/cadastrar">
+      Usuário<input type="text" id="nome" name="nome" size="40"><br>
+      Nome<input type="text" id="endereco" name="endereco" size="40"><br>
+      CPF<input type="text" id="cpf" name="cpf" size="40"><br>
+      Senha<input type="password" name="senha" id="senha" size="40"><br>
+      <a href="/listar"><input type="submit" id="submit" value="Submit"></a>
+    </form>
+        
+
+<!-- <input class="enviar" type=button value="Enviar" onclick="fnValidar();"> -->
+</form> 
+</body>
+</html>

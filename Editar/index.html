@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Artisan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <Header>
+        <div id="navMenu" onclick="openNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div id="artisan">Artisan</div>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+          </div>
+
+        <a href="/cadastro/cadastro.html"><button>Entrar</button> </a>
+    </Header>
+    <% usuarios.forEach( (usuario) => { %>
+    <p><a href="/editar/<%= usuario.id %>"><%=usuario.nome %></a> <a href="/deletar/<%= usuario.id %>">Deletar</a></p>
+    <% }); %>
+
+      <a href="/cadastrar"> Cadastrar Novo Usuario </a>
+    

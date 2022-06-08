@@ -25,9 +25,11 @@
     <h2><%= msg %></h2>
     <form method="POST" action="/cadastrar">
       Usuário<input type="text" id="nome" name="nome" size="40"><br>
-      Nome<input type="text" id="endereco" name="endereco" size="40"><br>
+      Endereço<input type="text" id="endereco" name="endereco" size="40"><br>
+      Telefone<input class="entrada" name='telefone' id="telefoneCliente" placeholder="(00)90000-0000" size="11"> <br>
       CPF<input type="text" id="cpf" name="cpf" size="40"><br>
       Senha<input type="password" name="senha" id="senha" size="40"><br>
+      Data de Nascimento<input type="date" name='data' id="data" placeholder="DD/MM/AAAA" ><br>
       <a href="/listar"><input type="submit" id="submit" value="Submit"></a>
     </form>
         

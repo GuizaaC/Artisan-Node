@@ -54,8 +54,9 @@ app.post("/cadastrar", function(req,res){
   var endereco = req.body.endereco;
   var cpf = req.body.cpf;
   var senha = sha1(req.body.senha);
+  var data = req.body.data;
 
-  const novoUsuario ={'nome':nome,'endereco':endereco,'cpf':cpf,'senha':senha};
+  const novoUsuario ={'nome':nome,'endereco':endereco,'cpf':cpf,'senha':senha,'data':data};
 
   connection.query("insert into usuario set ?",novoUsuario,function(erro,respo){
     if(erro){
@@ -96,10 +97,12 @@ app.post("/editar",function(request,res){
   var nome=request.body.nome;
   var endereco=request.body.endereco;
   var cpf=request.body.cpf;
+  var senha = sha1(req.body.senha);
+  var data = req.body.data;
  
   var id = request.body.id;
 
-  connection.query('UPDATE usuario SET nome = ?, endereco = ?, cpf = ? Where id = ?',[nome,endereco,cpf,id], function(erro,result){
+  connection.query('UPDATE usuario SET nome = ?, endereco = ?, cpf = ?, senha = ?, data = ? Where id = ?',[nome,endereco,cpf,senha,data,id], function(erro,result){
     if(erro){
       console.log(erro)
     }
